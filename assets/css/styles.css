@@ -1,0 +1,240 @@
+.fondo {
+    width: 100%;
+}
+
+.logo {
+    width: 50%;
+    /* Limits the image width to 30% of its container */
+    position: absolute;
+    /* Positions the element relative to the viewport */
+    top: 1%;
+    /* Moves the top edge of the element to the vertical center */
+    left: 50%;
+    /* Moves the left edge of the element to the horizontal center */
+    transform: translate(-50%);
+}
+
+
+.texto_menu {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: x-large;
+}
+
+.my-custom-padding-top {
+    padding-top: 40px;
+    transform: translate(50%);
+    width: 50%;
+    max-width: 18rem
+}
+
+.texto-carta {
+    font-size: 10px;
+}
+
+/* assets/css/styles.css o custom.css */
+
+.card-img-overlay-gradient {
+    position: absolute;
+    /* Permite posicionarlo dentro del overlay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Cubre todo el overlay */
+
+    /* El degradado va de transparente (rgba(0,0,0,0)) a negro (rgba(0,0,0,0.7)) */
+    /* La dirección es 'to top' para que lo oscuro quede abajo y lo transparente arriba */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+
+    /* Asegura que el degradado esté debajo del texto */
+    z-index: 1;
+}
+
+/* Ajusta el z-index de tu texto para que quede por encima del degradado */
+.card-img-overlay h5,
+.card-img-overlay p {
+    /* Si tienes párrafos también */
+    position: relative;
+    /* Necesario para que z-index funcione en elementos no posicionados */
+    z-index: 2;
+    /* Mayor que el z-index del degradado */
+}
+
+/* Si tu texto ya estaba en la parte inferior, puedes hacer ajustes en .card-img-overlay */
+/* para que el degradado no empuje el contenido. */
+/* Si ya tienes d-flex y justify-content-end en .card-img-overlay, debería funcionar bien. */
+.card-img-overlay.text-end.d-flex.flex-column.justify-content-end {
+    /* Asegúrate de que el texto esté abajo. La clase text-end aquí podría no ser necesaria si ya usas flexbox */
+}
+
+/* Ajusta el margen del h5 para que no se pegue al borde inferior si el degradado es muy denso */
+.card-title {
+    margin-bottom: 0.5rem;
+    /* Ajusta este valor si el texto queda muy pegado al fondo */
+}
+
+/* En tu archivo assets/css/styles.css o custom.css */
+
+.card {
+    border: none !important;
+    /* Elimina el borde */
+    box-shadow: none !important;
+    /* También puedes quitar cualquier sombra si la hubiera */
+}
+
+/* Si solo quieres quitar el borde inferior del card-img-overlay por ejemplo */
+.card-img-overlay {
+    border-bottom: none !important;
+}
+
+/* En tu archivo: assets/css/styles.css o custom.css */
+
+.card-img-overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+
+    /* AÑADIR ESTAS PROPIEDADES */
+    border-radius: inherit;
+    /* Hereda los bordes redondeados del padre (.card-img-overlay) */
+    /* Opcional: Si 'inherit' no funciona o si necesitas un valor específico */
+    /* border-radius: 0.375rem; */
+    /* Este es el border-radius por defecto de las cards de Bootstrap */
+
+    /* Asegura que el contenido (el degradado) se corte si sobresale del radio */
+    overflow: hidden;
+}
+
+/* También es buena práctica asegurarse de que el card-img-overlay tenga overflow: hidden */
+/* para que todo su contenido se recorte correctamente. */
+.card-img-overlay {
+    overflow: hidden;
+}
+
+/* Y para la imagen, para asegurar que también se recorte bien con el radio de la carta */
+.card-img {
+    border-radius: inherit;
+    /* O el mismo valor que uses en la carta */
+    object-fit: cover;
+    width: 100%;
+    /* Ensures the image takes the full width of its container */
+    height: 100px;
+    /* Si tu carta tiene una altura definida y quieres que la imagen la llene */
+}
+
+/* Si eliminaste el borde de la carta, está bien, pero el border-radius aún se aplica */
+.card {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0.375rem;
+    /* Asegúrate que la carta tenga un border-radius. Este es el valor por defecto de Bootstrap */
+    overflow: hidden;
+    /* Muy importante para que el contenido (imagen, degradado) se recorte */
+}
+
+.carta-letra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: x-large;
+    font-size: 16px;
+}
+
+.carta-letra-titulo {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.logos-redes {
+    width: 20px;
+}
+
+.logo-tequila {
+    width: 80px;
+}
+
+.bg-footer {
+    background-color: #036BC0;
+}
+
+.redes-letra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 15px;
+    color: white;
+    margin: 0;
+}
+
+.footer-pd-y {
+    padding: 10px 0px;
+}
+
+.btn-mg-y {
+    margin: 10px 0px;
+
+}
+
+.menu-letra {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+
+    margin: 0;
+}
+
+.menu-mg-y {
+    margin-top: -70px;
+}
+
+.mg-y {
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.zarandeados-menu {
+    color: red;
+}
+
+.tequila-30-30 {
+    color: #036BC0;
+}
+
+.aviso {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.img-width {
+    width: 100px;
+}
+
+.estrella {
+    font-size: 10px;
+}
