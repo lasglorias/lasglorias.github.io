@@ -63,13 +63,6 @@
     /* Mayor que el z-index del degradado */
 }
 
-/* Si tu texto ya estaba en la parte inferior, puedes hacer ajustes en .card-img-overlay */
-/* para que el degradado no empuje el contenido. */
-/* Si ya tienes d-flex y justify-content-end en .card-img-overlay, debería funcionar bien. */
-.card-img-overlay.text-end.d-flex.flex-column.justify-content-end {
-    /* Asegúrate de que el texto esté abajo. La clase text-end aquí podría no ser necesaria si ya usas flexbox */
-}
-
 /* Ajusta el margen del h5 para que no se pegue al borde inferior si el degradado es muy denso */
 .card-title {
     margin-bottom: 0.5rem;
