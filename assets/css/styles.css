@@ -139,13 +139,20 @@
     /* Muy importante para que el contenido (imagen, degradado) se recorte */
 }
 
+.precio {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
 .carta-letra {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    font-size: x-large;
-    font-size: 16px;
 }
 
 .carta-letra-titulo {
